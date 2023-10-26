@@ -1,0 +1,39 @@
+package com.example.demo;
+
+import org.springframework.boot.web.servlet.error.ErrorController;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpSession;
+
+@Controller
+public class CourseController {
+	@RequestMapping("course")
+	public String courses()
+	{
+		return "course";
+	}
+	
+	@RequestMapping("order")
+	public String putName(HttpServletRequest req)
+	{
+		String myName = req.getParameter("name");
+		HttpSession httpSession = req.getSession();
+		httpSession.setAttribute("myName", myName);
+		System.out.println(myName);
+		return "course";
+	}
+	
+	@RequestMapping("order-session")
+	public String getSessionName(String cName,HttpSession session)
+	{
+	
+	}
+	
+	
+	
+}

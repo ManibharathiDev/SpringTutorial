@@ -1,0 +1,8 @@
+package com.example.demo;
+
+public class Customer {
+	private int cid;
+	private String cname;
+	private String address;
+	private String age;
+}

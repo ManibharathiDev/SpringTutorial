@@ -1,0 +1,8 @@
+package com.example.demo;
+
+public class CourseController {
+	public void courses()
+	{
+		System.out.println("Welcome to Manibharathi Tech");
+	}
+}
